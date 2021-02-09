@@ -1,28 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace L0001_Two_Sum
+namespace LeetCodeSolution
 {
-    class Program
+    class L0001
     {
-        static void Main(string[] args)
-        {
-            int[] nums = new int[] { 3, 2, 4 };
-            int target = 6;
-            int[] ret = Solution3(nums, target);
-            if (ret[0] == 1 && ret[1] == 2)
-            {
-                Console.WriteLine("pass");
-            }
-            else
-            {
-                Console.WriteLine("error");
-            }
-        }
-
         //Approach 1: Brute Force 暴力法
         static public int[] Solution1(int[] nums, int target)
         {
@@ -80,7 +63,7 @@ namespace L0001_Two_Sum
                 {
                     ret[0] = i;
                     ret[1] = map[sub];
-                    if (ret[0]!=ret[1])
+                    if (ret[0] != ret[1])
                     {
                         break;
                     }
@@ -125,7 +108,5 @@ namespace L0001_Two_Sum
 
             return ret;
         }
-
-
     }
 }
